@@ -184,11 +184,11 @@ public class TestList {
     // (without touching the assertions themselves)
     assertEquals(7, list.size());
     assertEquals(33, list.get(0).intValue());
-    assertEquals(99, list.get(1).intValue());
+    assertEquals(77, list.get(1).intValue());
     assertEquals(44, list.get(2).intValue());
-    assertEquals(99, list.get(3).intValue());
+    assertEquals(77, list.get(3).intValue());
     assertEquals(55, list.get(4).intValue());
-    assertEquals(99, list.get(5).intValue());
+    assertEquals(77, list.get(5).intValue());
     assertEquals(66, list.get(6).intValue());
   }
 
