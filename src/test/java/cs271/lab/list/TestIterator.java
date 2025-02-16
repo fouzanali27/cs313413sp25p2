@@ -27,6 +27,19 @@ public class TestIterator {
   public void tearDown() throws Exception {
     list = null;
   }
+  public void testIterator() {
+    // Add elements to the list
+    list.add(1);
+    list.add(2);
+    list.add(3);
+    java.util.Iterator<Integer> iterator = list.iterator();
+    assertTrue(iterator.hasNext());
+    assertEquals(Integer.valueOf(1), iterator.next());
+    assertEquals(Integer.valueOf(2), iterator.next());
+    assertEquals(Integer.valueOf(3), iterator.next());
+    assertFalse(iterator.hasNext());
+  }
+
 
   @Test
   public void testEmpty() {
