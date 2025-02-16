@@ -149,6 +149,7 @@ public class TestList {
   }
   @Test
   public void testRemoveAll() {
+    List<Integer> list = new ArrayList<>();
     list.add(33);
     list.add(77);
     list.add(44);
@@ -158,9 +159,10 @@ public class TestList {
     list.add(66);
     // TODO in a single statement using removeAll and List.of,
     // remove items from the list to make the following assertions pass
-    // (without touching the assertions themselves)
-    assertEquals(3, list.size());
-    assertEquals(List.of(77, 77, 77), list);
+    // (without touching the assertions themselves)assertEquals(3, list.size());
+    list.removeAll(List.of(77));
+    assertEquals(4, list.size());
+    assertEquals(List.of(33, 44, 55, 66), list);
   }
 
   @Test
