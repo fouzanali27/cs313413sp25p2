@@ -131,7 +131,8 @@ public class TestList {
   }
 
   @Test
-  public void testAddAll() {
+  public void testAddAll()
+  {
     // TODO in a single statement using addAll and List.of,
     // add items to the list to make the following assertions pass
     // (without touching the assertions themselves)
@@ -146,7 +147,6 @@ public class TestList {
     assertEquals(77, list.get(5).intValue());
     assertEquals(66, list.get(6).intValue());
   }
-
   @Test
   public void testRemoveAll() {
     list.add(33);
@@ -205,6 +205,7 @@ public class TestList {
 
   @Test
   public void testSubList() {
+    List<Integer> list = new ArrayList<>();
     list.add(33);
     list.add(77);
     list.add(44);
@@ -214,6 +215,6 @@ public class TestList {
     list.add(66);
     // TODO fix the arguments in the subList method so that the assertion
     // passes
-    assertEquals(List.of(44, 77, 55), list.subList(0, 0));
+    assertEquals(List.of(44, 77, 55), list.subList(2, 5));
   }
 }
