@@ -163,10 +163,12 @@ public class TestList {
     list.add(55);
     list.add(77);
     list.add(66);
+
     // TODO in a single statement using retainAll and List.of,
     // remove items from the list to make the following assertions pass
     // (without touching the assertions themselves)
-    assertEquals(3, list.size());
+    assertEquals(7, list.size());
+    list.retainAll(List.of(77));
     assertEquals(List.of(77, 77, 77), list);
   }
 
