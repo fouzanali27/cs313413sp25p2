@@ -85,6 +85,7 @@ public class TestIterator {
 
   @Test
   public void testAverageValues() {
+    List<Integer> list = new ArrayList<>();
     list.add(33);
     list.add(77);
     list.add(44);
@@ -94,6 +95,15 @@ public class TestIterator {
     list.add(66);
     double sum = 0;
     int n = 0;
+
+    Iterator<Integer> i = list.iterator();
+    while (i.hasNext()) {
+      sum += i.next();
+      n++;
+    }
+
+    double average = sum / n;
+
     // TODO use an iterator and a while loop to compute the average (mean) of the values
     // (defined as the sum of the items divided by the number of items)
     // testNonempty shows how to use an iterator; use i.hasNext() in the while loop condition
